@@ -1,0 +1,33 @@
+{
+  "vulnerability-assessor": {
+    "path": ".\\.gemini\\agents\\vulnerability-assessor",
+    "tier": "specialist",
+    "model": "pro",
+    "primary_manager": "engineering-manager",
+    "description": "Pedagogical hacker evaluating assignments against a Predictability Matrix.",
+    "skills": [
+      "predictability-scorer"
+    ]
+  },
+  "resilient-designer": {
+    "path": ".\\.gemini\\agents\\resilient-designer",
+    "tier": "specialist",
+    "model": "pro",
+    "primary_manager": "engineering-manager",
+    "description": "Modern instructional designer that engineers AI-resilient deliverables.",
+    "skills": [
+      "local-context-fetcher",
+      "mermaid-baseline-generator"
+    ]
+  },
+  "blueprint-compiler": {
+    "path": ".\\.gemini\\agents\\blueprint-compiler",
+    "tier": "specialist",
+    "model": "flash",
+    "primary_manager": "release-manager",
+    "description": "Auditor and compiler merging redesigned activities into the final course blueprint.",
+    "skills": [
+      "constraint-auditor"
+    ]
+  }
+}

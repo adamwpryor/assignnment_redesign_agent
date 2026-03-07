@@ -1,0 +1,34 @@
+{
+    "local-context-fetcher": {
+        "path": ".\\.gemini\\skills\\local-context-fetcher",
+        "category": "project",
+        "description": "Mock MCP server integration pulling institutional policies and specific local constraints to ground assignments.",
+        "commands": [
+            "name: fetch_local_context"
+        ]
+    },
+    "predictability-scorer": {
+        "path": ".\\.gemini\\skills\\predictability-scorer",
+        "category": "pedagogy",
+        "description": "Programmatically calculates the predictability score of an assignment based on format standardity and context availability.",
+        "commands": [
+            "name: calculate_predictability"
+        ]
+    },
+    "mermaid-baseline-generator": {
+        "path": ".\\.gemini\\skills\\mermaid-baseline-generator",
+        "category": "content",
+        "description": "Spins up baseline visual frameworks (as code) that students will be required to modify and defend.",
+        "commands": [
+            "name: generate_mermaid_code"
+        ]
+    },
+    "constraint-auditor": {
+        "path": ".\\.gemini\\skills\\constraint-auditor",
+        "category": "pedagogy",
+        "description": "Crawls generated assignments and flags any deliverable that looks like an unverified text document.",
+        "commands": [
+            "name: audit_assignment_constraints"
+        ]
+    }
+}
