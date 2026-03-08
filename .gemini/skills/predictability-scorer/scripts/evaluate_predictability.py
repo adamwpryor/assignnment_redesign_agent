@@ -42,13 +42,36 @@ def evaluate_predictability(assignment_text):
         score += 3
         feedback.append("Deliverable appears to be text-only. Text is the native output of generative AI.")
 
-    # Normalize score to 1-10
-    final_score = max(1, min(10, score))
+    # Normalize base structural score
+    base_score = score
+    
+    # 4. Integrate Metacognitive & Relational Load
+    try:
+        from evaluate_metacognition import evaluate_metacognition
+        meta_metrics = evaluate_metacognition(assignment_text)
+        
+        # Apply the multiplier to the base score
+        final_score = base_score * meta_metrics.get("cognitive_offload_multiplier", 1.0)
+        feedback.extend(meta_metrics.get("feedback", []))
+        
+    except ImportError:
+        final_score = base_score
+        feedback.append("Warning: Could not load metacognitive evaluation engine. Score is structural only.")
+        meta_metrics = {}
+
+    # Cap final score between 1 and 10
+    final_score = max(1.0, min(10.0, final_score))
     
     return json.dumps({
-        "predictability_score": final_score,
+        "cognitive_offload_probability_score": round(final_score, 1),
         "risk_level": "High" if final_score >= 7 else "Medium" if final_score >= 4 else "Low",
-        "feedback": feedback
+        "feedback": feedback,
+        "raw_metrics": {
+            "structural_base_score": base_score,
+            "blooms_ratio": meta_metrics.get("blooms_ratio", 0),
+            "constraint_density": meta_metrics.get("constraint_density", 0),
+            "freire_hooks_index": meta_metrics.get("relational_index", 0)
+        }
     }, indent=2)
 
 if __name__ == "__main__":
