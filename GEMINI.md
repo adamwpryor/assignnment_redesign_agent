@@ -4,13 +4,14 @@
 
 **Primary Objective:** Transition online courses from "knowledge regurgitation" to "AI-collaborative critical thinking".
 **Pedagogical Constraint:** Prioritize verifiable *process-over-product* assessment.
+**Zero-Trust Enforcement:** This is a locally defined system. If an agent or tool attempts to make a call to the wider web for any reason, it MUST halt and notify the user that it is trying to leave the isolated environment, requesting explicit permission before proceeding.
 
 ## Bootloader Master Links
 
-This orchestrator links with the Gemini Local Context Hooking environment.
+This orchestrator links with the Gemini Local Context Hooking environment. It will look for global registries in the user's home directory, but will gracefully ignore them if they do not exist.
 
-- **Global Agent Registry:** `C:\Users\adamw\.gemini\registry\agents.json`
-- **Global Skill Registry:** `C:\Users\adamw\.gemini\registry\skills.json`
+- **Global Agent Registry:** `~/.gemini/registry/agents.json` (or `%USERPROFILE%\.gemini\registry\agents.json`)
+- **Global Skill Registry:** `~/.gemini/registry/skills.json` (or `%USERPROFILE%\.gemini\registry\skills.json`)
 - **Local Agent Extensions:** `.gemini/agents.json`
 - **Local Skill Extensions:** `.gemini/skills.json`
 

@@ -3,9 +3,14 @@ import re
 import os
 
 def audit_assignment_constraints(assignment_text):
-    """
-    Crawls an assignment string to detect if it requests unverified text deliverables.
-    Returns a strict PASS/FAIL evaluation based on the loaded banned_patterns.
+    """Crawls an assignment string to detect if it requests unverified text deliverables.
+    
+    Args:
+        assignment_text (str): The text of the assignment to evaluate.
+        
+    Returns:
+        str: A JSON string containing a strict PASS/FAIL evaluation and any detected violations 
+             based on the loaded banned_patterns.
     """
     assets_dir = os.path.join(os.path.dirname(__file__), '..', 'assets')
     patterns_path = os.path.normpath(os.path.join(assets_dir, 'banned_patterns.json'))

@@ -29,5 +29,25 @@
     "skills": [
       "constraint-auditor"
     ]
+  },
+  "context-manager": {
+    "path": ".\\.gemini\\agents\\context-manager",
+    "tier": "specialist",
+    "model": "flash",
+    "primary_manager": "engineering-manager",
+    "description": "Curates and maintains the simulated institutional environment variables.",
+    "skills": [
+      "mock-payload-updater"
+    ]
+  },
+  "pipeline-cleaner": {
+    "path": ".\\.gemini\\agents\\pipeline-cleaner",
+    "tier": "specialist",
+    "model": "flash",
+    "primary_manager": "release-manager",
+    "description": "Sanitizes the workspace and ensures a clean slate before or after a pipeline run.",
+    "skills": [
+      "workspace-resetter"
+    ]
   }
 }

@@ -2,9 +2,14 @@ import json
 import re
 
 def evaluate_predictability(assignment_text):
-    """
-    Evaluates an assignment for cognitive offload potential (predictability).
-    Scores from 1 (highly resilient) to 10 (highly predictable/automatable).
+    """Evaluates an assignment for cognitive offload potential (predictability).
+    
+    Args:
+        assignment_text (str): The assignment text to evaluate.
+        
+    Returns:
+        str: A JSON string containing the cognitive_offload_probability_score (from 1 to 10),
+             risk_level, textual feedback, and raw metrics.
     """
     score = 0
     feedback = []

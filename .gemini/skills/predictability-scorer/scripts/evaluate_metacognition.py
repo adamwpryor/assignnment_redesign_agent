@@ -3,6 +3,14 @@ import re
 import os
 
 def load_lexicon(filename):
+    """Loads a JSON lexicon file from the assets directory.
+    
+    Args:
+        filename (str): The name of the lexicon JSON file.
+        
+    Returns:
+        dict: The parsed JSON data from the lexicon file, or an empty dictionary if not found.
+    """
     assets_dir = os.path.join(os.path.dirname(__file__), '..', 'assets')
     try:
         with open(os.path.join(assets_dir, filename), 'r', encoding='utf-8') as f:
@@ -11,9 +19,16 @@ def load_lexicon(filename):
         return {}
 
 def evaluate_metacognition(text):
-    """
-    Evaluates the qualitative metacognitive and relational load of an assignment.
+    """Evaluates the qualitative metacognitive and relational load of an assignment.
+    
     Calculates Bloom's Distribution, Constraint Density, and Freire-Hooks Relational Index.
+    
+    Args:
+        text (str): The assignment text to evaluate.
+        
+    Returns:
+        dict: A dictionary containing calculated metrics including blooms_ratio, 
+              constraint_density, relational_index, cognitive_offload_multiplier, and feedback.
     """
     text_lower = text.lower()
     sentences = re.split(r'[.!?]+', text_lower)

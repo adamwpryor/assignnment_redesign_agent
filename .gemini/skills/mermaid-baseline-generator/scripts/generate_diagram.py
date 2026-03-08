@@ -2,9 +2,14 @@ import json
 import os
 
 def generate_mermaid_code(framework_type):
-    """
-    Retrieves the baseline Mermaid.js code structure for a requested framework.
-    Returns the raw string data from the associated asset file.
+    """Retrieves the baseline Mermaid.js code structure for a requested framework.
+    
+    Args:
+        framework_type (str): The name of the visual framework to generate (e.g., 'decision_tree').
+        
+    Returns:
+        str: A JSON string containing the framework type and its raw Mermaid.js code,
+             or an error message if the framework type is unknown or the asset is missing.
     """
     assets_dir = os.path.join(os.path.dirname(__file__), '..', 'assets')
     templates_path = os.path.normpath(os.path.join(assets_dir, 'templates.json'))

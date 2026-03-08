@@ -30,5 +30,21 @@
         "commands": [
             "name: audit_assignment_constraints"
         ]
+    },
+    "mock-payload-updater": {
+        "path": ".\\.gemini\\skills\\mock-payload-updater",
+        "category": "project",
+        "description": "Updates the local context mock payload with new institutional data.",
+        "commands": [
+            "name: update_mock_payload"
+        ]
+    },
+    "workspace-resetter": {
+        "path": ".\\.gemini\\skills\\workspace-resetter",
+        "category": "project",
+        "description": "Clears the output directory to prepare the workspace for a fresh pipeline run.",
+        "commands": [
+            "name: reset_workspace"
+        ]
     }
 }

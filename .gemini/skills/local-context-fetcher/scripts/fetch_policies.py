@@ -2,9 +2,13 @@ import json
 import os
 
 def fetch_local_context():
-    """
-    Simulates an MCP server fetching institutional data.
+    """Simulates an MCP server fetching institutional data.
+    
     Loads the payload from assets/mock_payload.json.
+    
+    Returns:
+        str: A JSON string containing the mocked MCP endpoint response and data,
+             or an error message if the payload file is not found.
     """
     assets_dir = os.path.join(os.path.dirname(__file__), '..', 'assets')
     payload_path = os.path.normpath(os.path.join(assets_dir, 'mock_payload.json'))

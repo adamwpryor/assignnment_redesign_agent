@@ -53,25 +53,35 @@ assignnment_redesign_agent/
 
 ### The Orchestration Loop
 
-This template utilizes three custom agent Specialists that pass structured JSON and Markdown payloads sequentially:
+This template utilizes five custom agent Specialists that interact with the environment:
 
-1. **Vulnerability Assessor (`.gemini/agents/vulnerability-assessor`)**:
+1. **Context Manager (`.gemini/agents/context-manager`)**:
+    * **Role**: Intermediary for updating institutional data.
+    * **Logic**: Receives new user-provided policies or context and merges them into the `.gemini/skills/local-context-fetcher/assets/mock_payload.json` file.
+2. **Vulnerability Assessor (`.gemini/agents/vulnerability-assessor`)**:
     * **Input**: Reads `input/legacy_syllabus.md`.
     * **Logic**: Evaluates assignments using a "Predictability Matrix" (measuring Format Standardity, Context Availability, and Verification methods).
     * **Output**: Generates a structured `output/vulnerabilities.json` payload mapping vulnerable assignments to predictive AI-bypass pathways.
-2. **Resilient Designer (`.gemini/agents/resilient-designer`)**:
+3. **Resilient Designer (`.gemini/agents/resilient-designer`)**:
     * **Input**: Reads `output/vulnerabilities.json`.
     * **Logic**: Uses the `local-context-fetcher` skill (a mocked Model Context Protocol server returning institutional data). It enforces the strict constraint to eliminate text deliverables, transforming them into process-driven tasks. Must *never* rely on "prompt logs."
     * **Output**: Generates `output/resilient_activities.md`.
-3. **Blueprint Compiler (`.gemini/agents/blueprint-compiler`)**:
+4. **Blueprint Compiler (`.gemini/agents/blueprint-compiler`)**:
     * **Input**: Reads both the original `input/legacy_syllabus.md` and the new `output/resilient_activities.md`.
     * **Logic**: Acts as the auditor to ensure original learning objectives were preserved.
     * **Output**: Integrates everything into the final `output/modernized_course_blueprint.md`.
+5. **Pipeline Cleaner (`.gemini/agents/pipeline-cleaner`)**:
+    * **Role**: Maintenance and reset specialist.
+    * **Logic**: Empties the `output/` directory, removing all generated artifacts to prepare the workspace for a fresh run without state pollution.
 
-### Native Setup instructions
+### Native Setup Instructions
 
 Because this project utilizes Gemini OS conventions, setup is minimal:
 
-1. Ensure your global registry (`C:\Users\adamw\.gemini\registry\...`) is active.
+1. Ensure your global registry (`~/.gemini/registry/...` or `%USERPROFILE%\.gemini\registry\...`) is active. The system will look for global registries in your user directory, but will gracefully ignore them if they do not exist, relying entirely on local extensions.
 2. Navigate the Gemini CLI/OS into this directory. The root `GEMINI.md` file will immediately hook the local `.gemini/agents.json` and `.gemini/skills.json` payloads into your active context.
 3. You can execute the pipeline natively using your standard System Orchestrators.
+
+### Zero-Trust Architecture
+
+This pipeline enforces a strict "Zero-Trust" architecture. All contextual data and simulated API endpoints (such as the Model Context Protocol server in `local-context-fetcher`) are entirely mocked using local, contained JSON assets. The system is designed to operate completely offline and must never make external network calls without explicit user consent.
