@@ -1,0 +1,12 @@
+{
+    "institution": "Midwestern University",
+    "active_policies": {
+        "generative_ai_use": "Level 2: AI as Co-Pilot. Students must cite specific prompts used and attach an appendix showing how they verified the AI's output against textbook claims.",
+        "academic_integrity": "Violations involve submitting raw AI output without structural modification or critique."
+    },
+    "local_context_variables": {
+        "current_campus_challenge": "Parking shortage in Lot C leading to delayed attendance.",
+        "regional_industry": "Healthcare and Biotechnology manufacturing.",
+        "student_demographics": "40% first-generation, high percentage of working adult learners."
+    }
+}

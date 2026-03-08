@@ -1,0 +1,23 @@
+sequenceDiagram
+    actor User
+    participant Frontend
+    participant Backend_API
+    participant Database
+
+    User->>Frontend: Submit Action Request
+    Frontend->>Backend_API: POST /api/v1/action
+    
+    alt Validation Passed
+        Backend_API->>Database: Transaction Request (ACID)
+        Database-->>Backend_API: Commit Confirmed
+        Backend_API-->>Frontend: 200 OK
+        Frontend-->>User: Success Notification
+    else Validation Failed
+        Backend_API-->>Frontend: 400 Bad Request
+        Frontend-->>User: Display Error Message
+    end
+    
+    %% Instructions for Student Modification:
+    %% 1. Replace this generic client-server architecture with the historical interactions between the three key powers studied this week.
+    %% 2. Add a new \"actor\" representing the populace/consumers.
+    %% 3. Defend your timeline structure in tomorrow's seminar.

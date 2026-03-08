@@ -1,0 +1,16 @@
+stateDiagram-v2
+    [*] --> Initial_Setup
+    
+    Initial_Setup --> Active_Phase : Trigger Condition A
+    Active_Phase --> Review_Phase : Milestone Reached
+    Active_Phase --> Escalation : Critical Error
+    
+    Escalation --> Active_Phase : Issue Resolved
+    Escalation --> Terminal_Failure : Mitigation Failed
+    
+    Review_Phase --> [*] : Success Exit
+    
+    %% Instructions for Student Modification:
+    %% 1. Map these generic states to the specific process lifecycle from Chapter 4.
+    %% 2. Define the exact parameters of the "Trigger Condition" and "Critical Error" for our current scenario.
+    %% 3. Record a 2-minute video tracing the path of a specific, complex edge case through this system.

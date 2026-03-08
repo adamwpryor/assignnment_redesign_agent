@@ -14,6 +14,13 @@ This orchestrator links with the Gemini Local Context Hooking environment.
 - **Local Agent Extensions:** `.gemini/agents.json`
 - **Local Skill Extensions:** `.gemini/skills.json`
 
+## Orchestrator Paradigm
+
+As the Chief of Staff and Orchestrator of this workspace, development is primarily delegated through the Master Bootloader:
+
+- **Capability Manager / Skill Builder:** Responsible for generating required tool packages (`scripts/` and `SKILL.md`). The orchestrator does not invent arbitrary folder structures (like `templates` or `examples`) outside the `skill-builder`'s established package formats.
+- **Engineering Manager:** Ensures all script logic adheres to Zero-Trust and Conda-First environments.
+
 ## Routing Logic
 
 Standard multi-agent pipeline handoff via structured data (JSON) and markdown:

@@ -1,0 +1,44 @@
+{
+    "templates": {
+        "decision_tree": {
+            "file": "decision_tree_base.mmd",
+            "description": "A standard branching logic flowchart. Useful for historical analysis, ethical dilemmas, or clinical triage redesigns."
+        },
+        "system_map": {
+            "file": "system_map_base.mmd",
+            "description": "A complex structural flowchart with subgraphs and database nodes. Useful for mapping biology pathways, sociological structures, or engineering architectures."
+        },
+        "entity_relationship": {
+            "file": "entity_relationship_base.mmd",
+            "description": "An ER diagram mapping data entities and relationships. Useful for database design, taxonomy mapping, or literary character relationship webs."
+        },
+        "state_machine": {
+            "file": "state_machine_base.mmd",
+            "description": "A state diagram showing transitions between distinct states. Useful for defining lifecycle stages, political regime shifts, or chemical reactions."
+        },
+        "sequence_diagram": {
+            "file": "sequence_diagram_base.mmd",
+            "description": "A sequence diagram plotting interactions between actors over time. Useful for historical timelines, network protocols, or narrative plot progression."
+        },
+        "class_diagram": {
+            "file": "class_diagram_base.mmd",
+            "description": "A class diagram showing inheritance and composition. Useful for biological taxonomies, organizational hierarchies, or object-oriented programming."
+        },
+        "user_journey": {
+            "file": "user_journey_base.mmd",
+            "description": "A user journey map tracking tasks and emotional states. Useful for UX design, patient journey mapping, or analyzing a protagonist's arc."
+        },
+        "gantt_chart": {
+            "file": "gantt_chart_base.mmd",
+            "description": "A Gantt chart tracking project timelines and dependencies. Useful for project management, historical event timelines, or strategic planning."
+        },
+        "mindmap": {
+            "file": "mindmap_base.mmd",
+            "description": "A central-hub mindmap. Useful for brainstorming, concept clustering, or outlining the key themes of a text."
+        },
+        "quadrant_chart": {
+            "file": "quadrant_chart_base.mmd",
+            "description": "A 2x2 quadrant chart. Useful for SWOT analysis, risk assessment matrices, or political compass mapping."
+        }
+    }
+}
