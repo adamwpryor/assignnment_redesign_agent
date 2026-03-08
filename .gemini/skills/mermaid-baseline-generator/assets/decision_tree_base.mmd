@@ -1,15 +1,10 @@
 graph TD
-    A[Start: Initial Concept] --> B{Key Decision Point 1}
-    B -- Option X --> C[Outcome 1: Immediate Consequence]
-    B -- Option Y --> D[Outcome 2: Alternative Path]
+    A["Start: Initial Concept"] --> B{"Key Decision Point 1"}
+    B -->|"Option X"| C["Outcome 1: Immediate Consequence"]
+    B -->|"Option Y"| D["Outcome 2: Alternative Path"]
     
-    C --> E{Secondary Decision}
+    C --> E{"Secondary Decision"}
     D --> E
     
-    E -- Proceed --> F[Final State A]
-    E -- Re-evaluate --> G[Final State B]
-
-    %% Instructions for Student Modification:
-    %% 1. Replace placeholder text with specific concepts from your reading.
-    %% 2. Add at least two new decision nodes demonstrating edge-cases.
-    %% 3. Apply style classes to differentiate ethical vs. technical decisions.
+    E -->|"Proceed"| F["Final State A"]
+    E -->|"Re-evaluate"| G["Final State B"]

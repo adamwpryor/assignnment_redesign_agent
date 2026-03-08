@@ -1,22 +1,17 @@
 flowchart LR
     subgraph External Environment
-        A(Input Source 1)
-        B(Regulatory Body)
+        A("Input Source 1")
+        B("Regulatory Body")
     end
     
     subgraph Core System
-        C[[Central Processing]]
-        D[(Data Storage)]
-        E{{Feedback Loop Mechanism}}
+        C["Central Processing"]
+        D[("Data Storage")]
+        E{"Feedback Loop Mechanism"}
     end
     
-    A -->|Raw Material| C
-    B -.->|Compliance Mandates| C
+    A -->|"Raw Material"| C
+    B -.->|"Compliance Mandates"| C
     C ===> D
     D --> E
-    E -->|Adjustment Signal| C
-    
-    %% Instructions for Student Modification:
-    %% 1. Map this generic system to the specific organizational structure discussed in Week 3.
-    %% 2. Identify and draw one structural vulnerability not shown here.
-    %% 3. Be prepared to defend why you assigned specific shapes to specific actors.
+    E -->|"Adjustment Signal"| C

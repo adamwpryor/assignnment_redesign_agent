@@ -29,7 +29,7 @@ For each vulnerability identified, you must design a new assignment that satisfi
 
 **APPROVED DELIVERABLE FORMATS (You must map the assignment to one of these):**
 
-* **Visual Frameworks & Diagrams:** The student must build a system map, Mermaid.js diagram, or conceptual graph, defended via an oral/video component.
+* **Visual Frameworks & Diagrams:** The student must build a system map, Mermaid.js diagram, or conceptual graph, defended via an oral/video component. **CRITICAL:** When generating Mermaid charts, never use `%%` comments inside the block, and always wrap node/edge text in double quotes (e.g., `A["Text"] -->|"Label"| B["Text"]`).
 * **"Artifact as Blueprint" Documentation:** The student uses AI to generate logic/code/text, but the deliverable is highly specific, standardized technical documentation (like an Architectural Decision Record or a precise rubric map) tied directly to institutional constraints.
 * **In-Browser/Live Demonstrations:** The deliverable is a recorded screen-share where the student narrates a live, real-time manipulation of a tool to solve a problem.
 * **Hyper-Local Context Synthesis:** The AI processes standard knowledge, but the student must integrate it dynamically with an MCP-fetched local dataset (e.g., provided via the `project.local-context-fetcher` skill).
