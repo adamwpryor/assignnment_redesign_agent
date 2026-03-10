@@ -22,14 +22,14 @@ If you have access to a local Python environment (e.g., via a `run_command` or s
 
 ### Mode B: Agentic Fallback (Python-less)
 
-If you are running in an environment without a Python interpreter, **YOU (the LLM)** must act as the heuristic execution engine.
+If you are running in an environment without a Python interpreter, **YOU (the LLM)** must act as the heuristic execution engine and output a JSON array assessing the vulnerability.
 
 1. **Load Lexicons:** Read the raw JSON of `assets/blooms_taxonomy.json` and `assets/freire_hooks_lexicon.json` into your context.
-2. **Structural Base Score (1-10):**
-    * Standard format (essay/discussion) = +3 Risk
-    * Lacks local/recent context = +4 Risk
-    * Purely text-based output = +3 Risk
-3. **Metacognitive Load (Multiplier):** Read the input text. Count the ratio of lower-order to higher-order Bloom's verbs. If lower-order dominates > 60%, multiply the Base Score by 1.2. If higher-order dominates > 70%, multiply by 0.8.
-4. **Constraint Density (Multiplier):** Look for limiting clauses (must include, limit to). If high, multiply by 0.7. If low/open-ended, multiply by 1.1.
-5. **Freire-Hooks Relational Index (Multiplier):** Scan for relational markers (lived experience, dialogue, power dynamic). If detected frequently (> 1 per 3 sentences), multiply score by 0.5. If 0 markers, multiply by 1.15.
-6. **Final Output:** Cap the multiplied final score between 1.0 and 10.0 and output a `vulnerabilities.json` payload detailing your math.
+2. **Initial Risk Band Assessment (Low, Medium, High, Critical):**
+    * Standard format (essay/discussion)? -> Set baseline to Medium/High.
+    * Lacks local/recent context? -> Escalate risk by one band.
+    * Purely text-based output? -> Escalate risk by one band.
+3. **Metacognitive Load (Semantic Evaluation):** Read the input text. If lower-order Bloom's verbs dominate (Define, List, Summarize), escalate risk by one band. If higher-order dominates (Synthesize, Evaluate), lower risk by one band.
+4. **Constraint Density:** If the prompt has highly specific limiting clauses ("must include X, Y, Z specific metrics"), lower the risk by one band. If open-ended, maintain or elevate.
+5. **Relational Index:** Scan for relational markers (lived experience, dialogue). If present frequently, lower the risk.
+6. **Final Output:** Output a `vulnerabilities.json` payload listing each assignment with its final `qualitative_risk_band` (Low, Medium, High, Critical) and the specific reasoning (feedback) detailing your semantic evaluation.

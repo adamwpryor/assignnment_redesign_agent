@@ -1,0 +1,36 @@
+# Mermaid Baseline Generator
+
+When an assignment requires a "Visual Framework Defense," you must draft the baseline Mermaid.js code that serves as the "AI's first pass" for the student to critique and inherently break.
+
+## Strict Syntax Constraints
+
+When embedding Mermaid code into a final markdown document, it MUST adhere to the following syntax rules to prevent rendering crashes in standard LMS systems (Canvas, Blackboard):
+
+1. **NO INLINE COMMENTS**: Never include `%%` comments inside the ` ```mermaid ` code block. Markdown parsers often fail when encountering them. Place instructions *outside* the code block.
+2. **STRICT QUOTATIONS**: All node text and edge labels must be enclosed in double quotes. 
+    * Do not use parentheses `()` or brackets `[]` inside the text strings unless absolutely necessary, but if you do, ensure the entire string is wrapped in double quotes.
+    * *Correct Node:* `A["Start: Initial Concept"]`
+    * *Incorrect Node:* `A[Start: Initial Concept]`
+    * *Correct Edge:* `B -->|"Option X"| C`
+    * *Incorrect Edge:* `B -- Option X --> C`
+
+## Example Framework: Decision Tree
+
+```mermaid
+graph TD
+    A["Initial State"] -->|"Choice 1"| B["Branch A"]
+    A -->|"Choice 2"| C["Branch B"]
+    B -->|"Result"| D["Terminal State 1"]
+    C -->|"Result"| E["Terminal State 2"]
+```
+
+## Example Framework: System Map
+
+```mermaid
+graph LR
+    A["User Input"] -->|"Processes"| B["API Gateway"]
+    B -->|"Routes"| C["Microservice 1"]
+    B -->|"Routes"| D["Microservice 2"]
+    C -->|"Reads/Writes"| E["Database Main"]
+    D -->|"Fetches"| F["External API"]
+```

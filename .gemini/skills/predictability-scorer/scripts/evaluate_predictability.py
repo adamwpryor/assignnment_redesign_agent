@@ -64,12 +64,22 @@ def evaluate_predictability(assignment_text):
         feedback.append("Warning: Could not load metacognitive evaluation engine. Score is structural only.")
         meta_metrics = {}
 
+    # Calculate Qualitative Risk Band
+    if final_score >= 8:
+        risk_band = "Critical"
+    elif final_score >= 6:
+        risk_band = "High"
+    elif final_score >= 3:
+        risk_band = "Medium"
+    else:
+        risk_band = "Low"
+
     # Cap final score between 1 and 10
     final_score = max(1.0, min(10.0, final_score))
     
     return json.dumps({
+        "qualitative_risk_band": risk_band,
         "cognitive_offload_probability_score": round(final_score, 1),
-        "risk_level": "High" if final_score >= 7 else "Medium" if final_score >= 4 else "Low",
         "feedback": feedback,
         "raw_metrics": {
             "structural_base_score": base_score,

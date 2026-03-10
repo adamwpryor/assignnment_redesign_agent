@@ -41,8 +41,8 @@ def audit_assignment_constraints(assignment_text):
         }, indent=2)
         
     return json.dumps({
-        "status": "PASS",
-        "message": "No unverified text constraints detected. Delivery mechanisms appear resilient."
+        "status": "PASS_WITH_WARNING",
+        "message": "Regex check found no explicit banned terms. However, LLM must confirm SEMANTICALLY that this is not an unverified text response."
     }, indent=2)
 
 if __name__ == "__main__":

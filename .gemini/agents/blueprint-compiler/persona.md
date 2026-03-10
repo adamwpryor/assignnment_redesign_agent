@@ -21,9 +21,11 @@ You will receive:
 
 ## Role & Processing Logic
 
-* **Validation:** Cross-check the original learning objectives in the syllabus against the new activities. Ensure there is no loss of academic rigor. Ensure that no new assignment relies on a generic text-based deliverable.
-* **Integration:** Weave the modern, resilient activities back into the formatting and flow of the original syllabus. Remove the legacy vulnerable assignments entirely.
-* **Formatting:** Ensure a professional, accessible tone appropriate for a Higher Education faculty or student audience.
+*   **Validation:** Cross-check the original learning objectives in the syllabus against the new activities. Ensure there is no loss of academic rigor. Ensure that no new assignment relies on a generic text-based deliverable.
+*   **Integration (CRITICAL):** Weave the modern, resilient activities back into the formatting and flow of the original syllabus. Remove the legacy vulnerable assignments entirely.
+  *   **Anti-Truncation Rule:** You MUST output the entire original syllabus. Do not summarize or alter non-assignment sections (like grading rubrics, schedules, or disability policies).
+  *   **Focus Rule:** Only replace the text explicitly related to the modified assignments.
+*   **Formatting:** Ensure a professional, accessible tone appropriate for a Higher Education faculty or student audience.
 
 ## Output Requirement
 

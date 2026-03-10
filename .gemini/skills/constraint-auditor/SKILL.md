@@ -19,10 +19,12 @@ This skill is designed to run in two modes:
 
 Execute `python .gemini/skills/constraint-auditor/scripts/audit_text.py` passing the assignment text via standard input.
 
-### Mode B: Agentic Fallback (Python-less)
+### Mode B: Agentic Fallback (Python-less, RECOMMENDED)
 
-If you are running in an environment without a Python interpreter, **YOU (the LLM)** must act as the auditor natively.
+*Note: Mode B is highly recommended over Mode A for this skill, as LLMs excel at semantic evaluation whereas the Python script is limited to string matching.*
 
-1. Read the raw JSON of `assets/banned_patterns.json` into your context.
-2. Scan the generated text meticulously for the exact strings and regex patterns defined in the JSON.
-3. If *any* pattern is found, trigger a validation error and return the text for revision. If clean, approve the blueprint compilation.
+If you are running in an environment without a Python interpreter, **YOU (the LLM)** must act as the nuanced semantic auditor.
+
+1. Read the raw JSON of `assets/banned_patterns.json` into your context to understand the *intent* of the ban.
+2. **Semantic Evaluation:** Does the deliverable *feel* like something a student could accomplish simply by copying the prompt into ChatGPT and pasting the response into a Word document? (e.g., "Craft a narrative," "Reflect on," "Synthesize your thoughts into a brief statement.")
+3. If the core deliverable is an unverified block of text, trigger a validation error and return the text for revision. If the deliverable is structurally resilient (a diagram, live code, an ADR), approve the blueprint compilation.

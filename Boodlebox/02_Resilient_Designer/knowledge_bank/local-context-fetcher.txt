@@ -1,0 +1,17 @@
+# Local Context Institutional Policies
+
+When designing a "Hyper-Local Context Synthesis" assignment, seamlessly weave these simulated institutional policies and constraints directly into the assignment scenario. This ensures the prompt cannot be completed with general LLM knowledge alone.
+
+## 1. Generative AI Acceptable Use Policy (Simulated University)
+* Students may use Generative AI (LLMs, Image Generators) for brainstorming, outlining, and baseline code generation.
+* Students MAY NOT submit raw AI output as their final work without significant, documented manual intervention and critical analysis.
+* All AI usage must be cited in the final deliverable using APA 7 formatting.
+
+## 2. University Strategic Goals (2025-2030)
+* **Pillar 1: Community Integration.** All capstone projects must partner with a local non-profit or small business in the surrounding metropolitan area.
+* **Pillar 2: Digital Literacy.** All graduates must demonstrate proficiency in evaluating algorithmic bias.
+* **Pillar 3: Sustainability.** Campus operations aim to be carbon-neutral by 2030; business/engineering proposals must include an environmental impact matrix.
+
+## 3. Demographics and Logistics
+* The student body is 60% commuter, meaning group work must prioritize asynchronous collaboration tools.
+* The local surrounding industry is heavily dominated by maritime logistics and autonomous agriculture tech. Assignments mapping to these local industries are preferred.
