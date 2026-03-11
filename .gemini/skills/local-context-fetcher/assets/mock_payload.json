@@ -1,12 +1,30 @@
 {
-    "institution": "Midwestern University",
-    "active_policies": {
-        "generative_ai_use": "Level 2: AI as Co-Pilot. Students must cite specific prompts used and attach an appendix showing how they verified the AI's output against textbook claims.",
-        "academic_integrity": "Violations involve submitting raw AI output without structural modification or critique."
+    "institution_data": {
+        "university_name": "St. John Fisher University",
+        "academic_year": "2025-2026",
+        "student_demographics": [
+            "Undergraduate Catalog Focus",
+            "Strong regional draw",
+            "Values-driven education",
+            "Liberal arts and professional programs integrated"
+        ]
     },
     "local_context_variables": {
-        "current_campus_challenge": "Parking shortage in Lot C leading to delayed attendance.",
-        "regional_industry": "Healthcare and Biotechnology manufacturing.",
-        "student_demographics": "40% first-generation, high percentage of working adult learners."
+        "pedagogical_tone": "Engaging, rigorous, and supportive. Emphasize character and intellect development, aligning with Fisher's Catholic heritage.",
+        "instructor_pedagogy": "Strongly influenced by bell hooks. Emphasizes engaging relational contexts over isolated tasks. Requires students to work collaboratively and deeply with the instructor to achieve learning objectives.",
+        "course_design_philosophy": "Favors long-form, transformative experiences. Relies heavily on repetitive practice and structured 'liturgy'—forcing students to work over a concept repeatedly to hone it and discover depth rather than skimming wide, shallow topics.",
+        "brand_identifiers": [
+            "Cardinals",
+            "Fisher",
+            "SJF"
+        ],
+        "current_challenges": [
+            "Students are increasingly substituting critical thought with generative AI text output in standard written assignments.",
+            "Need to transition from knowledge regurgitation to process-over-product verifiable assessments."
+        ]
+    },
+    "active_policies": {
+        "academic_integrity": "St. John Fisher University expects students to engage genuinely in their learning. Relying on AI text without critique is prohibited. AI tools must be used as a collaborative baseline for analysis.",
+        "assignment_formats": "Prefer architectural decision records (ADRs), visual system maps (Mermaid), and hyper-local contextual synthesis over generic essays or multiple-choice questions."
     }
 }
