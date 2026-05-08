@@ -26,6 +26,6 @@ As the Chief of Staff and Orchestrator of this workspace, development is primari
 
 Standard multi-agent pipeline handoff via structured data (JSON) and markdown:
 
-1. **Agent 1: Vulnerability Assessor** -> Reads: `input/legacy_syllabus.md` -> Writes: `output/vulnerabilities.json`
+1. **Agent 1: Vulnerability Assessor** -> Reads: user-provided document (syllabus or assignment) -> Writes: `output/vulnerabilities.json`
 2. **Agent 2: Resilient Designer** -> Reads: `output/vulnerabilities.json` -> Writes: `output/resilient_activities.md`
-3. **Agent 3: Blueprint Compiler** -> Reads: `input/legacy_syllabus.md` + `output/resilient_activities.md` -> Writes: `output/modernized_course_blueprint.md`
+3. **Agent 3: Blueprint Compiler** -> Reads: original user document + `output/resilient_activities.md` -> Writes: `output/modernized_assignment.md`

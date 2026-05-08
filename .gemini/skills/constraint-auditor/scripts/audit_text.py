@@ -47,8 +47,26 @@ def audit_assignment_constraints(assignment_text):
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) > 1:
-        text = " ".join(sys.argv[1:])
-        print(audit_assignment_constraints(text))
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Audit an assignment for banned text-deliverable formats (Mode A regex). "
+                    "Always follow PASS_WITH_WARNING with an LLM semantic check (Mode B)."
+    )
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--file", "-f", help="Path to assignment text file")
+    group.add_argument("text", nargs="?", help="Assignment text (inline)")
+    args = parser.parse_args()
+
+    if args.file:
+        with open(args.file, "r", encoding="utf-8") as fh:
+            _text = fh.read()
+    elif args.text:
+        _text = args.text
+    elif not sys.stdin.isatty():
+        _text = sys.stdin.read()
     else:
-        print(json.dumps({"error": "No assignment text provided."}))
+        parser.print_help()
+        sys.exit(1)
+
+    print(audit_assignment_constraints(_text))

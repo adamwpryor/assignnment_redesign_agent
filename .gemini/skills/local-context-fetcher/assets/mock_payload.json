@@ -1,30 +1,49 @@
 {
     "institution_data": {
-        "university_name": "St. John Fisher University",
+        "university_name": "Youngstown State University",
         "academic_year": "2025-2026",
         "student_demographics": [
-            "Undergraduate Catalog Focus",
-            "Strong regional draw",
-            "Values-driven education",
-            "Liberal arts and professional programs integrated"
+            "Public metropolitan university; regional anchor institution",
+            "~12,000 students; approximately 70% commuter",
+            "55%+ first-generation college students",
+            "Primary regional draw: Mahoning County OH, Trumbull County OH, Mercer County PA",
+            "Many students work 20+ hours per week off-campus",
+            "Significant non-traditional age student population",
+            "High Pell grant recipient rate; economically diverse",
+            "Many students have family employment histories in steel, healthcare, or logistics"
         ]
     },
     "local_context_variables": {
-        "pedagogical_tone": "Engaging, rigorous, and supportive. Emphasize character and intellect development, aligning with Fisher's Catholic heritage.",
-        "instructor_pedagogy": "Strongly influenced by bell hooks. Emphasizes engaging relational contexts over isolated tasks. Requires students to work collaboratively and deeply with the instructor to achieve learning objectives.",
-        "course_design_philosophy": "Favors long-form, transformative experiences. Relies heavily on repetitive practice and structured 'liturgy'—forcing students to work over a concept repeatedly to hone it and discover depth rather than skimming wide, shallow topics.",
+        "pedagogical_tone": "Grounded, community-oriented, and equity-conscious. YSU students are deeply connected to the economic and social history of the Mahoning Valley. Assignments should acknowledge the complexity of post-industrial Rust Belt identity — frame Youngstown's transformation as a live design problem with real stakes, not a deficit narrative or a generic business case study.",
+        "instructor_pedagogy": "Rooted in Ernest Boyer's Scholarship of Engagement — knowledge should be produced in dialogue with community, not exported from campus. Emphasizes civic engagement, community awareness, and situating academic work within the Mahoning Valley's specific challenges and assets. Relational contexts and real community partnerships are preferred over isolated hypothetical tasks.",
+        "course_design_philosophy": "Engaged learning is an institutional commitment, not a pedagogical preference. Long-form, applied projects with traceable community impact carry institutional priority. Assignments must account for commuter and working-student realities: synchronous in-person group work outside class hours is not a reasonable default. All group projects must include a viable asynchronous workflow pathway. Do not assume access to personal high-performance hardware — YSU provides laptop lending and on-campus computing labs.",
         "brand_identifiers": [
-            "Cardinals",
-            "Fisher",
-            "SJF"
+            "Penguins",
+            "YSU",
+            "Youngstown State",
+            "Mahoning Valley",
+            "Rust Belt"
         ],
         "current_challenges": [
-            "Students are increasingly substituting critical thought with generative AI text output in standard written assignments.",
-            "Need to transition from knowledge regurgitation to process-over-product verifiable assessments."
-        ]
+            "Students are using generative AI to produce generic, growth-economy-framed responses that ignore the specific post-industrial context of Youngstown — assignments must require hyper-local data that an LLM cannot pre-fabricate.",
+            "First-generation students face invisible barriers in assignments that assume professional networks, unpaid internship availability, or prior industry access — assignments requiring community contacts must provide a structured pathway.",
+            "Need to transition from knowledge regurgitation to process-over-product assessments that demonstrate genuine engagement with regional economic transformation.",
+            "Commuter and working students disengage from assignments that don't connect to the economic realities of the Mahoning Valley — relevance to local industry and civic life is a retention factor, not a bonus."
+        ],
+        "key_local_institutions": {
+            "america_makes": "National Additive Manufacturing Institute, headquartered at 1410 Elm Street, Youngstown OH — 0.4 miles from YSU campus. YSU is a core research partner. Any assignment involving additive manufacturing, advanced manufacturing policy, or workforce development should reference this partnership. Generic LLM answers will not match America Makes' actual technology roadmap.",
+            "youngstown_business_incubator": "YBI at 241 W. Federal Street — ranked top 10 business incubator in North America. Active cohorts in cybersecurity, logistics software, and advanced materials. YSU students and alumni participate directly. Use for entrepreneurship and startup case studies.",
+            "mahoning_county_land_bank": "Manages 20,000+ vacant parcels from Youngstown's shrinking city transition. Youngstown adopted the first official Shrinking Cities Master Plan in the US (Youngstown 2010, updated 2021). Use for urban planning, policy, real estate, and community development assignments — LLMs default to growth-model assumptions that do not apply here.",
+            "raymond_john_wean_foundation": "Primary regional philanthropic actor funding community development, arts, and equity initiatives. Grant priorities shift annually — referencing current priorities requires institutional knowledge beyond LLM training data.",
+            "youngstown_cityscape": "Manages downtown commercial corridor data and retail gap analysis. Unique local datasets unavailable in LLM training.",
+            "mvmc": "Mahoning Valley Manufacturers Coalition — coordinates workforce pipeline between YSU and ~80 regional manufacturers.",
+            "mercy_health": "Dominant healthcare employer in the region. Mercy Health St. Elizabeth Youngstown Hospital is a Level II Trauma Center. Mahoning County has some of the highest rates of cardiovascular disease and diabetes in Ohio — use ZIP codes 44501-44515 for health equity assignments that require local data an LLM cannot accurately reproduce.",
+            "forum_health": "Covers Mercer County PA border communities — creates a cross-state healthcare access dynamic unique to this region and absent from generic healthcare LLM training data.",
+            "vallourec_star": "Surviving legacy seamless steel tube manufacturer in Youngstown. Workforce transitions here are a live case study in manufacturing adaptation — not historical."
+        }
     },
     "active_policies": {
-        "academic_integrity": "St. John Fisher University expects students to engage genuinely in their learning. Relying on AI text without critique is prohibited. AI tools must be used as a collaborative baseline for analysis.",
-        "assignment_formats": "Prefer architectural decision records (ADRs), visual system maps (Mermaid), and hyper-local contextual synthesis over generic essays or multiple-choice questions."
+        "academic_integrity": "YSU expects students to use Generative AI as a baseline research and synthesis collaborator — passive avoidance is not acceptable. Students may not submit raw, unmodified AI output as evidence of learning. All AI-assisted work must include an Architectural Attribution Note identifying which portions were AI-generated, which were manually corrected, and what domain-specific knowledge informed each correction. The standard is not 'did you use AI?' but 'did you develop and demonstrate your own expertise through the process?'",
+        "assignment_formats": "Prefer Architectural Decision Records (ADRs), Mermaid.js visual system maps, hyper-local data synthesis tied to Mahoning Valley institutions, and live or recorded demonstrations over generic essays or multiple-choice questions. All capstone and applied projects should default to problems with traceable economic or civic impact in Mahoning or Trumbull County."
     }
 }

@@ -23,7 +23,7 @@
   "blueprint-compiler": {
     "path": ".\\.gemini\\agents\\blueprint-compiler",
     "tier": "specialist",
-    "model": "flash",
+    "model": "pro",
     "primary_manager": "release-manager",
     "description": "Auditor and compiler merging redesigned activities into the final course blueprint.",
     "skills": [

@@ -1,17 +1,84 @@
-# Local Context Institutional Policies
+# Youngstown State University — Local Institutional Context
 
-When designing a "Hyper-Local Context Synthesis" assignment, seamlessly weave these simulated institutional policies and constraints directly into the assignment scenario. This ensures the prompt cannot be completed with general LLM knowledge alone.
+When designing a "Hyper-Local Context Synthesis" assignment, draw on the specific institutional, geographic, and economic context below. This ensures the prompt cannot be completed with general LLM knowledge alone — a student must engage with YSU's actual ecosystem to produce a passing response.
 
-## 1. Generative AI Acceptable Use Policy (Simulated University)
-* Students may use Generative AI (LLMs, Image Generators) for brainstorming, outlining, and baseline code generation.
-* Students MAY NOT submit raw AI output as their final work without significant, documented manual intervention and critical analysis.
-* All AI usage must be cited in the final deliverable using APA 7 formatting.
+---
 
-## 2. University Strategic Goals (2025-2030)
-* **Pillar 1: Community Integration.** All capstone projects must partner with a local non-profit or small business in the surrounding metropolitan area.
-* **Pillar 2: Digital Literacy.** All graduates must demonstrate proficiency in evaluating algorithmic bias.
-* **Pillar 3: Sustainability.** Campus operations aim to be carbon-neutral by 2030; business/engineering proposals must include an environmental impact matrix.
+## 1. Institutional Identity
 
-## 3. Demographics and Logistics
-* The student body is 60% commuter, meaning group work must prioritize asynchronous collaboration tools.
-* The local surrounding industry is heavily dominated by maritime logistics and autonomous agriculture tech. Assignments mapping to these local industries are preferred.
+**University:** Youngstown State University (YSU)
+**Location:** Youngstown, Ohio — Mahoning Valley, Northeast Ohio
+**Mission Statement:** "Engaged Learning. Integrated Education. Community Commitment."
+**Academic Year:** 2025–2026
+**Institutional Type:** Public metropolitan university; regional anchor institution
+
+YSU is one of the few American universities whose identity is explicitly tied to the revitalization of a post-industrial Rust Belt city. The university's role as a community partner in Youngstown's economic transformation is not aspirational — it is a core operational commitment embedded in accreditation, strategic planning, and curriculum design.
+
+---
+
+## 2. Generative AI Acceptable Use Policy (2025–2026)
+
+- Students are expected to use Generative AI as a **baseline research and synthesis collaborator** in relevant coursework — passive avoidance is not a pedagogically acceptable response to AI.
+- Students MAY NOT submit raw, unmodified AI output as evidence of their own learning. The submitted artifact must demonstrate the student's critical intervention on the AI's work.
+- All AI-assisted work must include an **Architectural Attribution Note**: a structured statement identifying which portions of the work were AI-generated, which were manually corrected, and what theoretical or domain-specific knowledge informed each correction.
+- The standard for academic integrity is not "did you use AI?" but "did you develop and demonstrate your own expertise through the process?"
+
+---
+
+## 3. University Strategic Pillars (2024–2029 Strategic Plan)
+
+**Pillar 1: Regional Economic Transformation**
+YSU is a designated partner institution for the Mahoning Valley's transition from legacy steel/manufacturing into advanced manufacturing, healthcare technology, and entrepreneurial ecosystems. All capstone and applied projects should default to problems with traceable economic impact in Mahoning or Trumbull County.
+
+**Pillar 2: First-Generation Student Success**
+Over 55% of YSU undergraduates are first-generation college students. Course design should reduce invisible barriers: avoid assumptions about prior professional networks, unpaid internship availability, or access to specialized equipment. Assignments requiring "industry contacts" must provide a structured pathway to access them.
+
+**Pillar 3: Community-Engaged Scholarship**
+YSU maintains formal civic partnerships with the City of Youngstown, Youngstown CityScape, the Raymond John Wean Foundation, and the Mahoning Valley Organizers Coalition. Research and applied projects that connect to these active partnerships carry institutional priority.
+
+**Pillar 4: Applied STEM and Health Equity**
+YSU's STEM programs are co-anchored by its partnership with **America Makes** (the National Additive Manufacturing Institute, headquartered 0.4 miles from campus at 1410 Elm Street) and the regional healthcare corridor. Engineering and health sciences assignments should leverage this proximity where possible.
+
+---
+
+## 4. Local Economic and Industry Context
+
+This is the layer of context a generic LLM will get wrong. Use it to create assignment scenarios that require institutional knowledge.
+
+**Advanced Manufacturing:**
+- **America Makes** is the nation's leading public-private partnership for additive manufacturing (3D printing), physically co-located with YSU. YSU faculty and students participate in active research projects. Assignment scenarios involving additive manufacturing policy, supply chain, or workforce development should reference this partnership explicitly — generic answers won't match the actual technology roadmap America Makes publishes.
+- **Vallourec Star** (seamless steel tubes, Youngstown plant) represents the surviving legacy industrial base. Its workforce transitions are a live case study in manufacturing adaptation.
+- The **Mahoning Valley Manufacturers Coalition (MVMC)** coordinates workforce pipeline between YSU and ~80 regional manufacturers.
+
+**Entrepreneurship:**
+- The **Youngstown Business Incubator (YBI)** at 241 W. Federal Street is ranked among the top 10 business incubators in North America. It has graduated companies in cybersecurity, logistics software, and advanced materials. YSU students and alumni are active in YBI cohorts. Case studies from YBI companies are uniquely local.
+- The **Youngstown State University Small Business Development Center (SBDC)** provides direct consulting to Mahoning Valley businesses — real, named clients available for project partnerships.
+
+**Healthcare:**
+- **Mercy Health (Youngstown/Warren market)** is the dominant healthcare employer in the region — Mercy Health St. Elizabeth Youngstown Hospital is a Level II Trauma Center. Health equity data for Mahoning County shows some of the highest rates of cardiovascular disease and diabetes in Ohio.
+- **Forum Health** (formerly Sharon Regional) covers Mercer County PA border communities — a cross-state healthcare access dynamic unique to this region.
+- YSU's **Bitonte College of Health and Human Services** has active clinical partnerships with both systems. Assignments mapping to real population health data for ZIP codes 44501–44515 are hyper-local by definition.
+
+**Urban Revitalization and Civic Data:**
+- Youngstown was the first American city to adopt an official **Shrinking Cities Master Plan** (Youngstown 2010 Plan, updated 2021). The city actively manages over 20,000 vacant parcels through the **Mahoning County Land Bank**. This data is publicly available and highly specific — LLMs trained on general urban planning literature will default to growth-model assumptions that don't apply here.
+- The **Raymond John Wean Foundation** is the primary regional philanthropic actor funding community development, arts, and equity work. Grant priorities shift annually; referencing current priorities requires institutional knowledge.
+- **Youngstown CityScape** manages downtown commercial corridor data and retail gap analysis — unique datasets not in LLM training data.
+
+---
+
+## 5. Student Demographics and Logistics
+
+- **Commuter rate:** ~70% of students commute; the majority work 20+ hours per week off-campus.
+- **First-generation rate:** 55%+ — the largest single demographic category.
+- **Geographic draw:** Primarily Mahoning County, Trumbull County (OH), and Mercer County (PA). Many students have family employment histories in steel, healthcare, or logistics.
+- **Collaboration constraint:** Synchronous in-person group work outside class hours is not a reasonable default expectation. All group projects must include a viable asynchronous workflow pathway.
+- **Technology access:** YSU provides free laptop lending and on-campus computing labs; do not design assignments that assume students have personal high-performance hardware.
+
+---
+
+## 6. Pedagogical Tone and Instructional Philosophy
+
+- YSU's general education outcomes emphasize **civic engagement and community awareness** — students are expected to situate academic work in relationship to the Mahoning Valley's specific challenges and assets.
+- The university's engaged learning model draws on **Ernest Boyer's Scholarship of Engagement** — knowledge should be produced in dialogue with community, not exported from campus.
+- Students respond strongly to assignments that acknowledge the economic complexity of their home region rather than treating it as a deficit. Frame Youngstown's post-industrial transition as a **design problem with real stakes**, not a case study of failure.
+- Avoid generic "business case" framing that assumes a growth economy. YSU students will see through it — many have parents who lost jobs in deindustrialization and will disengage from assignments that ignore that reality.
